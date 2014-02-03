@@ -8,18 +8,26 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
+  end
+
+  def create
+    @post = Post.new(post_params)
+    @post.user = User.first
+
+    if @post.save
+      flash[:notice] = "Your journal was saved"
+      redirect_to posts_path
+    else
+      render :new
+    end
   end
 
   def edit
   end
 
-  def create
-  end
-
   def update
   end
-
-
 
   private
 

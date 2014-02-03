@@ -1,8 +1,9 @@
 <h3>Journal</h3>
 
+<div class="well">
 <% @posts.each do |post| %>
-<td>
-  <dt><%= link_to post.title, post %></dt>
-</td>
+  <div class='control-group'>
+    <dt><%= link_to post.title, post %></dt>
+  </div>
 <% end %>
-
+</div>
