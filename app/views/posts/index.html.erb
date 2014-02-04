@@ -4,7 +4,7 @@
 
   <div class='control-group'>
     <% @posts.each do |post| %>
-    <dt><%= link_to post.title, post %></dt>
+    <li><%= link_to post.title, post %></li>
     <% end %>
   </div>
 
