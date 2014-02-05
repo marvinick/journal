@@ -1,11 +1,6 @@
 <h3>Journal</h3>
 
-<div class="well">
+<% @posts.each do |post| %>
+  <%= render 'post', post: post %>
+<% end %>
 
-  <div class='control-group'>
-    <% @posts.each do |post| %>
-    <li><%= link_to post.title, post %></li>
-    <% end %>
-  </div>
-
-</div>
