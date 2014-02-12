@@ -26,8 +26,6 @@
 <h5>Comments:<h5>
 
   <% @post.comments.each do |comment| %>
-    <div class="well span8">
-      <em>"<%= comment.body %>"</em>
-    </div>
+    <%= render 'comments/comment', comment: comment %>
   <% end %>
 
